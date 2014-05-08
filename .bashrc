@@ -20,14 +20,6 @@ esac
 
 use_color=true
 
-__git_ps1 ()
-{
-    local b="$(git symbolic-ref HEAD 2>/dev/null)";
-    if [ -n "$b" ]; then
-        printf " (%s)" "${b##refs/heads/}";
-    fi
-}
-
 if ${use_color} ; then
     if type -P dircolors >/dev/null ; then
         if [[ -f ~/.dir_colors ]] ; then
@@ -39,7 +31,7 @@ if ${use_color} ; then
     if [[ ${EUID} == 0 ]] ; then
         PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
     else
-        PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W\[\033[0;33m\]$(__git_ps1) \[\033[01;34m\]\$\[\033[00m\] '
+        PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W\[\033[01;34m\]\$\[\033[00m\] '
     fi
 else
     if [[ ${EUID} == 0 ]] ; then
