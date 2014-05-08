@@ -1,0 +1,23 @@
+[user]
+	name = Ferdi van der Werf
+	email = efcm@vdwerf.eu
+[core]
+	excludesfile = ~/.git/exclude
+[color]
+	ui = auto
+	status = auto
+[color "branch"]
+	current = blue
+	local = green
+	remote = red
+[alias]
+	l = log --graph --pretty=format:'%C(yellow)%h %C(red)%d %C(reset)%s%C(green) (%cr)%C(bold blue) [%cn]' --decorate --date=short
+	st = status -sb
+	d = diff --stat
+[pull]
+	rebase = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = matching
