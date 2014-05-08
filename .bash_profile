@@ -40,5 +40,4 @@ unset LC_ALL
 [[ -f ~/.git-completion.bash ]] && source ~/.git-completion.bash
 [[ -f ~/.git-flow-completion.bash ]] && source ~/.git-flow-completion.bash
 [[ -f ~/.git-prompt.sh ]] && source ~/.git-prompt.sh
-
-#[[ -f ~/.bashrc ]]  && source ~/.bashrc
+[[ -f ~/.bashrc ]]  && source ~/.bashrc
