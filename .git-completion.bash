@@ -792,10 +792,10 @@ __git_aliased_command ()
 __git_find_on_cmdline ()
 {
 	local word subcommand c=1
-	while [ $c -lt $cword ]; do
+	while [[ $c -lt $cword ]]; do
 		word="${words[c]}"
 		for subcommand in $1; do
-			if [ "$subcommand" = "$word" ]; then
+			if [[ "$subcommand" = "$word" ]]; then
 				echo "$subcommand"
 				return
 			fi
