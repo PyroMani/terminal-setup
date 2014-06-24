@@ -46,5 +46,6 @@ fi
 #
 
 export EDITOR=vim
+export BUNDLER_EDITOR=sublime
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
